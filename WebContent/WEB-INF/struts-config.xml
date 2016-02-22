@@ -7,6 +7,8 @@
     <form-beans>
         <form-bean name="LoginForm"
             type="com.helpdesk.form.LoginForm" />
+             <form-bean name="ticketForm"
+            type="com.helpdesk.form.TicketForm" />
     </form-beans>
  
  
@@ -20,7 +22,13 @@
             <forward name="success" path="/welcome.jsp" />
             <forward name="failure" path="/index.jsp" />
         </action>
+         <action path="/ticket" name="ticketForm"  input="/welcome.jsp"
+            type="com.helpdesk.action.TicketAction">
+            <forward name="success" path="/index.jsp" />
+           
+        </action>
     </action-mappings>
+   
  
      
     <message-resources parameter="resource.MessageResource"></message-resources>

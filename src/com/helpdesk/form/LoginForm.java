@@ -12,23 +12,7 @@ public class LoginForm extends ActionForm {
     private String userName;
     private String password;
      
-    public ActionErrors validate(ActionMapping mapping,
-            HttpServletRequest request) {
-     
-        ActionErrors actionErrors = new ActionErrors();
-         
-        if(userName == null || userName.trim().equals("")) {
-            actionErrors.add("userName", new ActionMessage("error.username"));
-        }
-        try {
-        if(password == null || password.trim().equals("")) {
-            actionErrors.add("password", new ActionMessage("error.password"));
-        }
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-        return actionErrors ;
-    }
+   
      
     public String getUserName() {
         return userName;
